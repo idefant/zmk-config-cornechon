@@ -263,8 +263,8 @@ layers:
   - ''
   - ''
   - ''
-  - Y-Scroll Mouse Mode
-  - XY-Scroll Mouse Mode
+  - Y Scroll Mouse
+  - XY Scroll Mouse
   - ''
   - Scroll ←
   - Mouse ↑
@@ -276,7 +276,7 @@ layers:
   - Alt
   - Ctrl
   - Shift
-  - X-Scroll Mouse Mode
+  - X Scroll Mouse
   - ''
   - Mouse ←
   - Mouse ↓
@@ -287,8 +287,8 @@ layers:
   - ''
   - ''
   - ''
-  - Slow Mouse Mode
-  - Fast Mouse Mode
+  - Slow Mouse
+  - Fast Mouse
   - ''
   - ''
   - ''

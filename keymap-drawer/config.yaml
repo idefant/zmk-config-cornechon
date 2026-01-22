@@ -109,8 +109,9 @@ parse_config:
     '&mouse_layer': MOUSE
     '&slow_mouse_mode': Slow Mouse Mode
     '&fast_mouse_mode': Fast Mouse Mode
-    '&hscroll_mouse_mode': H.Scroll Mouse Mode
-    '&vscroll_mouse_mode': V.Scroll Mouse Mode
+    '&x_scroll_mouse_mode': X-Scroll Mouse Mode
+    '&y_scroll_mouse_mode': Y-Scroll Mouse Mode
+    '&xy_scroll_mouse_mode': XY-Scroll Mouse Mode
 
   zmk_combos:
     bt_left_combo: { align: bottom }

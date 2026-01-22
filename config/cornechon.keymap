@@ -71,44 +71,59 @@ name: name { \
             label = "TO_COLEMAK";
         };
 
-        // F13
         slow_mouse_mode: slow_mouse_mode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms  = <0>;
-            bindings
-                = <&macro_tap &kt_off F14 &kt_off F15 &kt_off F16 &kt_on F13>;
+            bindings = <&macro_tap
+                &kt_on F13
+                &kt_off F14 &kt_off F15 &kt_off F16
+            >;
         };
 
-        // F14
         fast_mouse_mode: fast_mouse_mode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms  = <0>;
-            bindings
-                = <&macro_tap &kt_off F13 &kt_off F15 &kt_off F16 &kt_on F14>;
+            bindings = <&macro_tap
+                &kt_on F14
+                &kt_off F13 &kt_off F15 &kt_off F16
+            >;
         };
 
-        // F15
-        hscroll_mouse_mode: hscroll_mouse_mode {
+        x_scroll_mouse_mode: x_scroll_mouse_mode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms  = <0>;
-            bindings
-                = <&macro_tap &kt_off F13 &kt_off F14 &kt_on F15>;
+            bindings = <&macro_tap
+                &kt_on F15
+                &kt_off F13 &kt_off F14 &kt_off F16
+            >;
         };
 
-        // F16
-        vscroll_mouse_mode: vscroll_mouse_mode {
+        y_scroll_mouse_mode: y_scroll_mouse_mode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms  = <0>;
-            bindings
-                = <&macro_tap &kt_off F13 &kt_off F14 &kt_on F16>;
+            bindings = <&macro_tap
+                &kt_on F16
+                &kt_off F13 &kt_off F14 &kt_off F15
+            >;
+        };
+
+        xy_scroll_mouse_mode: xy_scroll_mouse_mode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms  = <0>;
+            bindings = <&macro_tap
+                &kt_on F15 &kt_on F16
+                &kt_off F13 &kt_off F14
+            >;
         };
 
         mouse_mode_reset: mouse_mode_reset {
@@ -314,10 +329,10 @@ name: name { \
 
         MOUSE {
             bindings = <
-&trans  &none     &none     &hscroll_mouse_mode  &vscroll_mouse_mode  &none   &none      &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP    &none
-&none   &kp LGUI  &kp LALT  &kp LCTRL            &kp LSHFT            &none   &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
-&none   &none     &none     &slow_mouse_mode     &fast_mouse_mode     &none   &none      &none           &none           &none            &none           &none
-                            &trans               &trans               &trans  &mkp RCLK  &mkp LCLK       &mkp MCLK
+&trans  &none     &none     &none      &y_scroll_mouse_mode  &xy_scroll_mouse_mode   &none      &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP    &none
+&none   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT             &x_scroll_mouse_mode    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
+&none   &none     &none     &none      &slow_mouse_mode      &fast_mouse_mode        &none      &none           &none           &none            &none           &none
+                            &trans     &trans                &trans                  &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
 
